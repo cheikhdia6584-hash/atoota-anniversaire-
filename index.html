@@ -1,169 +1,156 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Surprise 🎉</title>
-<style>
-  :root{
-    --bg:#0b1220; --card:#111b2e; --text:#eaf1ff; --muted:#a9b7d6;
-    --a:#7c5cff; --b:#33d1ff; --c:#3be08f; --d:#ffd166; --e:#ff5c8a;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; min-height:100vh; display:flex; justify-content:center; align-items:center;
-    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text);
-    background:
-      radial-gradient(1200px 600px at 15% 10%, rgba(124,92,255,.35), transparent 60%),
-      radial-gradient(900px 500px at 85% 25%, rgba(51,209,255,.25), transparent 60%),
-      radial-gradient(800px 450px at 60% 90%, rgba(59,224,143,.18), transparent 55%),
-      var(--bg);
-    overflow:hidden;
-  }
-  canvas{position:fixed; inset:0; pointer-events:none}
-  .wrap{width:min(920px,92vw); padding:18px; position:relative; z-index:2}
-  .card{
-    background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-    border:1px solid rgba(255,255,255,.14);
-    border-radius:22px;
-    box-shadow:0 30px 90px rgba(0,0,0,.5);
-    padding:22px;
-    backdrop-filter: blur(6px);
-  }
-  .top{
-    display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
-  }
-  .pill{
-    display:inline-flex; align-items:center; gap:10px;
-    padding:8px 12px; border-radius:999px;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.12);
-    color:var(--muted); font-weight:600; font-size:13px;
-  }
-  .dot{width:10px;height:10px;border-radius:50%;
-    background:conic-gradient(from 90deg, var(--a), var(--b), var(--c), var(--d), var(--e), var(--a));
-    box-shadow:0 0 0 6px rgba(124,92,255,.14);
-  }
-  h1{
-    margin:14px 0 6px;
-    font-size:clamp(28px,4.2vw,46px);
-    line-height:1.05;
-  }
-  .sub{margin:0 0 16px; color:var(--muted); font-size:15px}
-  .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:14px}
-  @media (max-width:820px){ .grid{grid-template-columns:1fr} }
-  .panel{
-    background:rgba(17,27,46,.75);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:18px;
-    padding:16px;
-  }
-  .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-  input, textarea{
-    width:100%; padding:12px 12px; border-radius:14px;
-    background:rgba(0,0,0,.22); color:var(--text);
-    border:1px solid rgba(255,255,255,.14);
-    outline:none;
-  }
-  textarea{min-height:120px; resize:vertical}
-  .btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
-  button{
-    border:0; cursor:pointer; border-radius:14px;
-    padding:12px 14px; font-weight:800;
-    background:linear-gradient(90deg, var(--a), var(--b));
-    color:#071022;
-    transition:transform .08s ease, filter .2s ease;
-  }
-  button:active{transform:scale(.98)}
-  .ghost{
-    background:rgba(255,255,255,.08);
-    color:var(--text);
-    border:1px solid rgba(255,255,255,.14);
-  }
-  .note{color:var(--muted); font-size:13px; margin-top:10px}
-  .letterWrap{position:relative; margin-top:14px}
-  .envelope{
-    border-radius:18px;
-    border:1px dashed rgba(255,255,255,.22);
-    background:rgba(255,255,255,.06);
-    padding:16px;
-    display:none;
-    transform-origin: top;
-    animation: pop .6s ease both;
-  }
-  @keyframes pop{
-    from{transform:translateY(10px) scale(.98); opacity:0}
-    to{transform:translateY(0) scale(1); opacity:1}
-  }
-  .spark{display:inline-block; animation: bounce 1.4s ease-in-out infinite}
-  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-  .big{
-    font-size:clamp(18px,2.2vw,22px); font-weight:800;
-    background:linear-gradient(90deg, var(--d), var(--e));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Atoota 🎉</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111b2e; --text:#eaf1ff; --muted:#a9b7d6;
+      --a:#7c5cff; --b:#33d1ff; --c:#3be08f; --d:#ffd166; --e:#ff5c8a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; min-height:100vh; overflow:hidden;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(124,92,255,.35), transparent 60%),
+        radial-gradient(900px 500px at 85% 25%, rgba(51,209,255,.25), transparent 60%),
+        radial-gradient(800px 450px at 60% 90%, rgba(59,224,143,.18), transparent 55%),
+        var(--bg);
+    }
+    canvas{position:fixed; inset:0; pointer-events:none}
+    .wrap{width:min(960px,92vw); margin:0 auto; padding:18px; position:relative; z-index:2}
+    .card{
+      margin-top:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:22px;
+      box-shadow:0 30px 90px rgba(0,0,0,.5);
+      padding:22px;
+      backdrop-filter: blur(6px);
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px; border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      color:var(--muted); font-weight:600; font-size:13px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:conic-gradient(from 90deg, var(--a), var(--b), var(--c), var(--d), var(--e), var(--a));
+      box-shadow:0 0 0 6px rgba(124,92,255,.14);
+    }
+    h1{
+      margin:14px 0 6px;
+      font-size:clamp(30px,4.4vw,52px);
+      line-height:1.05;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow{
+      from{ text-shadow:0 0 14px rgba(255,209,102,.35), 0 0 28px rgba(255,92,138,.25); }
+      to{ text-shadow:0 0 22px rgba(255,209,102,.55), 0 0 40px rgba(124,92,255,.35); }
+    }
+    .sub{margin:0 0 16px; color:var(--muted); font-size:15px}
+    .btns{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 10px}
+    button{
+      border:0; cursor:pointer; border-radius:14px;
+      padding:12px 14px; font-weight:800;
+      background:linear-gradient(90deg, var(--a), var(--b));
+      color:#071022;
+      transition:transform .08s ease, filter .2s ease;
+    }
+    button:active{transform:scale(.98)}
+    .ghost{
+      background:rgba(255,255,255,.08);
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .letter{
+      display:none;
+      margin-top:14px;
+      background:rgba(17,27,46,.75);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      padding:18px;
+      line-height:1.75;
+      font-size:17px;
+      animation: pop .7s ease both;
+      white-space:pre-wrap;
+    }
+    @keyframes pop{
+      from{opacity:0; transform:translateY(12px) scale(.98)}
+      to{opacity:1; transform:translateY(0) scale(1)}
+    }
+    .note{color:var(--muted); font-size:13px; margin-top:10px}
+    .toprow{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+  </style>
 </head>
+
 <body>
-<canvas id="c"></canvas>
+  <canvas id="c"></canvas>
 
-<div class="wrap">
-  <div class="card">
-    <div class="top">
-      <div class="pill"><span class="dot"></span><span>Surprise codée 🎁</span></div>
-      <div class="pill">Clique → animations → lettre 💌 <span class="spark">✨</span></div>
-    </div>
-
-    <h1>Joyeux anniversaire, <span id="who">Mon amie</span> 🎂</h1>
-    <p class="sub">Une petite page surprise : confettis, musique (option), et une lettre à la fin.</p>
-
-    <div class="grid">
-      <div class="panel">
-        <div class="big">Étape 1 : lance la surprise</div>
-        <div class="btns">
-          <button id="go">Lancer 🎉</button>
-          <button class="ghost" id="open" disabled>Ouvrir la lettre 💌</button>
-          <button class="ghost" id="reset">Recommencer</button>
-        </div>
-
-        <div class="letterWrap">
-          <div class="envelope" id="env"></div>
-          <div class="note">Astuce : tu peux personnaliser le prénom et la lettre à droite avant d’envoyer le lien.</div>
-        </div>
+  <div class="wrap">
+    <div class="card">
+      <div class="toprow">
+        <div class="pill"><span class="dot"></span><span>Surprise coded 💛</span></div>
+        <div class="pill">Click “Start” → music + confetti → letter 💌</div>
       </div>
 
-      <div class="panel">
-        <div class="big">Personnalisation</div>
+      <h1>Happy Birthday, Atoota 🎂</h1>
+      <p class="sub">A small surprise from Cheikh Khalid Dia — made with love and sincere du‘ā.</p>
 
-        <label class="note">Prénom</label>
-        <input id="name" placeholder="Ex : Aïcha" />
+      <div class="btns">
+        <button id="start">Start 🎉</button>
+        <button class="ghost" id="open" disabled>Open the letter 💌</button>
+        <button class="ghost" id="mute">Mute 🔇</button>
+      </div>
 
-        <label class="note" style="margin-top:10px; display:block;">Lettre</label>
-        <textarea id="msg">Salut [PRÉNOM] 💛
+      <div class="letter" id="letter"></div>
 
-Aujourd’hui c’est ton jour 🎂
-Je te souhaite une année pleine de paix, de bonheur et de réussite.
-Merci d’être toi, vraiment.
-
-Joyeux anniversaire ❤️
-
-— Aziz</textarea>
-
-        <div class="note">
-          (Option) Ajoute une musique : colle un lien mp3 direct dans le code si tu veux, sinon laisse.
-        </div>
+      <div class="note">
+        If the music doesn’t auto-play, just click “Start” once (browsers require a user click).
       </div>
     </div>
   </div>
-</div>
+
+  <!-- MUSIC (the mp3 must be in the same repo folder) -->
+  <audio id="music" preload="auto" loop>
+    <!-- Rename your mp3 to: bestpart.mp3 -->
+    <source src="bestpart.mp3" type="audio/mpeg" />
+  </audio>
 
 <script>
+  // ---------- Letter text ----------
+  const LETTER =
+`My dear Atoota,
+
+Today is your day, and I genuinely want to honor it with something special.
+
+First, Alhamdulillah for your life. I pray that Allah (SWT) surrounds you with His mercy, protects you from anything that harms your heart, and opens doors for you that you never expected.
+
+May Allah put barakah in your time, your plans, and your relationships. May He increase you in health, peace of mind, confidence, and light. May He make your path easy when it feels heavy, and may He give you strength when you feel tired.
+
+I pray that your dreams become reality in the best way, at the best time — and that your future is filled with beautiful moments that you will look back on with a smile.
+May Allah bless you with sincere friends, a good environment, and opportunities that elevate you in this dunya and the akhirah.
+
+If you ever doubt yourself, remember this: you are valuable, you are capable, and you deserve goodness. Keep your heart soft, keep your intentions pure, and trust Allah’s plan — it is always wiser than what we see.
+
+Happy birthday, Atoota.
+May Allah grant you long life, strong iman, halal happiness, and endless blessings.
+
+With sincere respect and warm wishes,
+
+Cheikh Khalid Dia 💛`;
+
   // ---------- Confetti canvas ----------
   const canvas = document.getElementById("c");
   const ctx = canvas.getContext("2d");
   let W, H, conf = [], running = false;
-
   const colors = ["#7c5cff","#33d1ff","#3be08f","#ffd166","#ff5c8a","#9bff57"];
+
   function resize(){
     W = canvas.width = window.innerWidth;
     H = canvas.height = window.innerHeight;
@@ -171,7 +158,7 @@ Joyeux anniversaire ❤️
   window.addEventListener("resize", resize);
   resize();
 
-  function spawn(n=180){
+  function spawn(n=240){
     conf = [];
     for(let i=0;i<n;i++){
       conf.push({
@@ -194,9 +181,7 @@ Joyeux anniversaire ❤️
       p.a += p.w;
       p.x += p.vx + Math.sin(p.a)*1.5;
       p.y += p.vy;
-
       if(p.y > H+30){ p.y = -30; p.x = Math.random()*W; }
-
       ctx.fillStyle = p.c;
       ctx.save();
       ctx.translate(p.x, p.y);
@@ -208,66 +193,57 @@ Joyeux anniversaire ❤️
   }
 
   // ---------- UI ----------
-  const who = document.getElementById("who");
-  const name = document.getElementById("name");
-  const msg  = document.getElementById("msg");
-  const go   = document.getElementById("go");
-  const open = document.getElementById("open");
-  const reset= document.getElementById("reset");
-  const env  = document.getElementById("env");
+  const startBtn = document.getElementById("start");
+  const openBtn  = document.getElementById("open");
+  const muteBtn  = document.getElementById("mute");
+  const letterEl = document.getElementById("letter");
+  const music    = document.getElementById("music");
 
-  function renderLetter(){
-    const n = (name.value.trim() || "toi");
-    who.textContent = name.value.trim() || "Mon amie";
-    const raw = msg.value || "";
-    const final = raw.replaceAll("[PRÉNOM]", n);
-    env.textContent = "💌 Lettre\n\n" + final;
+  let started = false;
+
+  function showLetter(){
+    letterEl.textContent = LETTER;
+    letterEl.style.display = "block";
+    letterEl.scrollIntoView({behavior:"smooth", block:"start"});
   }
-  name.addEventListener("input", renderLetter);
-  msg.addEventListener("input", renderLetter);
-  renderLetter();
 
-  let t = 0, countdown = null;
+  startBtn.addEventListener("click", async () => {
+    if(!started){
+      // start confetti
+      spawn();
+      running = true;
+      frame();
 
-  go.addEventListener("click", () => {
-    renderLetter();
-    env.style.display = "none";
-    open.disabled = true;
+      // start music (needs user click)
+      try { await music.play(); } catch(e) {}
 
-    spawn(220);
-    running = true;
-    frame();
+      // enable letter after a small “countdown”
+      openBtn.disabled = true;
+      let sec = 4;
+      startBtn.textContent = `Starting… ${sec}s`;
+      const timer = setInterval(() => {
+        sec--;
+        startBtn.textContent = sec>0 ? `Starting… ${sec}s` : "Start 🎉";
+        if(sec<=0){
+          clearInterval(timer);
+          openBtn.disabled = false;
+        }
+      }, 900);
 
-    let sec = 4;
-    go.textContent = `Patiente… ${sec}s`;
-    clearInterval(countdown);
-    countdown = setInterval(() => {
-      sec--;
-      go.textContent = sec>0 ? `Patiente… ${sec}s` : "Lancer 🎉";
-      if(sec<=0){
-        clearInterval(countdown);
-        open.disabled = false;
-      }
-    }, 900);
+      started = true;
+    } else {
+      // if clicked again, just ensure music plays
+      try { await music.play(); } catch(e) {}
+    }
   });
 
-  open.addEventListener("click", () => {
-    env.style.display = "block";
-    env.scrollIntoView({behavior:"smooth", block:"start"});
-  });
+  openBtn.addEventListener("click", showLetter);
 
-  reset.addEventListener("click", () => {
-    running = false;
-    ctx.clearRect(0,0,W,H);
-    env.style.display = "none";
-    open.disabled = true;
-    go.textContent = "Lancer 🎉";
+  muteBtn.addEventListener("click", () => {
+    music.muted = !music.muted;
+    muteBtn.textContent = music.muted ? "Unmute 🔊" : "Mute 🔇";
   });
-
-  // Auto-lance si tu ajoutes ?auto=1 dans le lien
-  if(new URLSearchParams(location.search).get("auto") === "1"){
-    setTimeout(()=>go.click(), 450);
-  }
 </script>
+
 </body>
 </html>
